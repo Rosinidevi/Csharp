@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        int temp = num, rev = 0;
+        while (num > 0)
+        {
+            int digit = num % 10;
+            rev = rev * 10 + digit;
+            num /= 10;
+        }
+        if (temp == rev)
+            Console.WriteLine("Palindrome");
+        else
+            Console.WriteLine("Not Palindrome");
+    }
+}
